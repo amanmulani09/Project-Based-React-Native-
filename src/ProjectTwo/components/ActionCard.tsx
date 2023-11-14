@@ -20,7 +20,7 @@ export default function ActionCard() {
         style={styles.cardImage}
         />
         <View style={styles.cardBodyContainer}>
-            <Text numberOfLines={3}>ES6 Features You Need to Learn Before Jumping into React or any other JavaScript frontend framework. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum distinctio in ducimus quaerat autem molestiae nulla illo explicabo beatae optio.</Text>
+            <Text style={styles.bodyText} numberOfLines={3}>ES6 Features You Need to Learn Before Jumping into React or any other JavaScript frontend framework. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum distinctio in ducimus quaerat autem molestiae nulla illo explicabo beatae optio.</Text>
         </View>
         <View style={styles.cardFooterContainer}>
          <TouchableOpacity onPress={()=> openWebsite('https://medium.com/@amanmulani/es6-features-you-need-to-learn-before-jumping-into-react-or-any-other-javascript-frontend-framework-c7164db30b8e')}>
@@ -36,15 +36,54 @@ export default function ActionCard() {
 }
 
 const styles = StyleSheet.create({
-    headingText:{},
-    card:{},
-    elevatedCard:{},
-    headingContainer:{},
-    headerText:{},
-    cardImage:{
-        height:100
+    headingText:{
+        fontSize:24,
+        fontWeight:'bold',
+        margin:5
     },
-    cardBodyContainer:{},
-    cardFooterContainer:{},
-    socialLinks:{}
+    card:{
+        width:350,
+        height:325,
+        marginTop:10,
+        backgroundColor:'black',
+        marginHorizontal:20,
+        borderRadius:8
+    },
+    elevatedCard:{},
+    headingContainer:{
+        padding:5
+    },
+    headerText:{
+        fontStyle:'italic',
+        fontSize:18,
+        fontWeight:'bold',
+        marginBottom:5,
+        color:'white',
+        padding:5,
+        textAlign:'center'
+    },
+    cardImage:{
+        height:150,
+        marginBottom:15
+    },
+    cardBodyContainer:{
+        padding:5
+    },
+    bodyText:{
+        color:'white'
+    },
+    cardFooterContainer:{
+        marginTop:5,
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'space-around',
+        padding:5
+    },
+    socialLinks:{
+        borderWidth:1,
+        borderColor:'white',
+        padding:5,
+        borderRadius:7,
+        backgroundColor:'white'
+    }
 })
