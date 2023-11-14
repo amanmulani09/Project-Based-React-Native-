@@ -4,6 +4,7 @@ import FlatCards from './components/FlatCards'
 import ElevatedCards from './components/ElevatedCards'
 import FancyCard from './components/FancyCard'
 import FancyCardSelf from './components/FancyCardSelf'
+import ActionCard from './components/ActionCard'
 const ProjectTwoApp = () => {
   const isPopularPlaces = true;
   return (
@@ -12,7 +13,7 @@ const ProjectTwoApp = () => {
       <FlatCards />
       <ElevatedCards />
       <FancyCard cardTitle="Trending Places"/>
-      <FancyCard cardTitle="Popular Places"/>
+      <ActionCard />
     </ScrollView>
    </SafeAreaView>
   )
