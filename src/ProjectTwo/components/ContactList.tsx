@@ -65,7 +65,12 @@ export default function ContactList() {
 }
 
 const styles = StyleSheet.create({
-    headingText:{},
+    headingText:{
+        fontSize:24,
+        fontWeight:'bold',
+        marginVertical:20,
+        marginHorizontal:10
+    },
     container:{},
     userCard:{},
     userImage:{
