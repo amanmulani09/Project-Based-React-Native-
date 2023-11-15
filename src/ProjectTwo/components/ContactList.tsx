@@ -5,7 +5,7 @@ export default function ContactList() {
     const listData = [
         {
             id:1,
-            name:'aman mulani',
+            name:'Aman Mulani',
             role:'Senior Frontend Engineer (Web & Mobile)',
             YOE:2,
             avatar:'https://amanmulani-personal-portfolio.netlify.app/assets/images/profile.jpeg'
@@ -46,7 +46,7 @@ export default function ContactList() {
   return (
     <View>
       <Text style={styles.headingText}>ContactList</Text>
-      <ScrollView style={styles.container} scrollEnabled={false}>
+      <ScrollView style={styles.container} scrollEnabled={true} horizontal={false}>
             {listData.map(({id,name,role,YOE,avatar})=>(
                 <View key={id} style={styles.userCard}>
                     <Image 
@@ -55,8 +55,10 @@ export default function ContactList() {
                         }}
                         style={styles.userImage}
                     />
+                    <View style={styles.userDetails}>
                     <Text style={styles.userName}>{name}</Text>
                     <Text style={styles.userRole}>{role} <Text style={styles.userYOE}>-{YOE} Years</Text></Text>
+                    </View>
                 </View>
             ))}
       </ScrollView>
@@ -72,13 +74,35 @@ const styles = StyleSheet.create({
         marginHorizontal:10
     },
     container:{},
-    userCard:{},
+    userCard:{
+        marginHorizontal:20,
+        paddingVertical:10,
+        backgroundColor:'#0a66c2',
+        marginBottom:10,
+        borderRadius:10,
+        flex:1,
+        flexDirection:'row'
+    },
     userImage:{
         width:60,
         height:60,
-        borderRadius:60/2
+        borderRadius:60/2,
+        marginHorizontal:10
     },
-    userName:{},
-    userRole:{},
+    userDetails:{
+        marginLeft:5
+    },
+    userName:{
+        fontSize:20,
+        color:'#ffffff',
+        fontWeight:'bold',
+    },
+    userRole:{
+        alignSelf:'center',
+        color:'#F2F3F5',
+        width:250,
+        marginTop:5,
+        marginLeft:3
+    },
     userYOE:{}
 })
