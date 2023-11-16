@@ -1,12 +1,26 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-//Form Validation
-import * as Yup from 'yup'
-const passWordSchema = Yup.object().shape({
-  PasswordLength:Yup.number().min(4,'minimum 4 digit required')
-  .max(16,'maximum 16 digit').required('length is required')
-})
+import React, { useState } from 'react'
+import { passWordSchema } from './utils'
 export default function ProjectThreeApp() {
+  const [password,setPassword] = useState('');
+  const [isPassGenerated,setIspassGenerated] = useState(false);
+
+  const [lowerCase,setLowerCase] = useState(true);
+  const [upperCase,setUpperCase] = useState(false);
+  const [numbers,setNumbers] = useState(false);
+  const [symbols,setSymbols] = useState(false);
+
+  const generatePasswordString = function(length:number){
+    //
+  }
+
+  const createPassword = function(characters:string,length:number){
+//
+  }
+
+  const resetPassword = ()=>{
+    //
+  }
   return (
     <View>
       <Text>App</Text>
