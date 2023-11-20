@@ -38,7 +38,7 @@ export default function ProjectThreeApp() {
     return result;
   }
 
-  const resetPassword = ()=>{
+  const resetPasswordState = ()=>{
     setPassword('');
     setIspassGenerated(false);
     setLowerCase(false);
@@ -124,13 +124,23 @@ export default function ProjectThreeApp() {
           />
          </View>
 
-
          <View style={styles.formActions}>
-          <TouchableOpacity>
-            <Text>Generate Password</Text>
+          <TouchableOpacity 
+          disabled={!isValid}
+          style={styles.primaryBtn}
+          // onPress={handleSubmit}
+          >
+            <Text style={styles.primaryBtnTxt}>Generate Password</Text>
             </TouchableOpacity>
-          <TouchableOpacity>
-            <Text>Reset</Text>
+
+          <TouchableOpacity 
+          style={styles.secondaryBtn}
+          onPress={()=>{
+              handleReset();
+              resetPasswordState();
+          }}
+          >
+            <Text style={styles.secondaryBtnTxt}>Reset</Text>
             </TouchableOpacity>
          </View>
          </>
