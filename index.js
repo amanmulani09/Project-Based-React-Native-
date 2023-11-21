@@ -7,7 +7,8 @@ import {AppRegistry} from 'react-native';
 // import AppPro from './AppPro';
 // import FlexBoxPrac from './src/components/flexbox/FlexBoxPrac';
 // import ProjectTwoApp from './src/ProjectTwo/ProjectTwoApp';
-import ProjectThreeApp from './src/ProjectThree/ProjectThreeApp';
+// import ProjectThreeApp from './src/ProjectThree/ProjectThreeApp';
+import ProjectFourApp from './src/ProjectFour/ProjectFourApp';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => ProjectThreeApp);
+AppRegistry.registerComponent(appName, () => ProjectFourApp);
