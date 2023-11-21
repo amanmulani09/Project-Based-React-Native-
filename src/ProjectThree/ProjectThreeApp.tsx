@@ -125,15 +125,15 @@ export default function ProjectThreeApp() {
          </View>
 
          <View style={styles.formActions}>
-          <TouchableOpacity 
+           <TouchableOpacity 
           disabled={!isValid}
           style={styles.primaryBtn}
-          // onPress={handleSubmit}
+          onPress={()=> handleSubmit()}
           >
-            <Text style={styles.primaryBtnTxt}>Generate Password</Text>
-            </TouchableOpacity>
+          <Text style={styles.primaryBtnTxt}>Generate Password</Text>
+           </TouchableOpacity>
 
-          <TouchableOpacity 
+            <TouchableOpacity 
           style={styles.secondaryBtn}
           onPress={()=>{
               handleReset();
@@ -145,8 +145,15 @@ export default function ProjectThreeApp() {
          </View>
          </>
        )}
-     </Formik>
+          </Formik>
         </View>
+        {isPassGenerated ? (
+          <View style={[styles.card,styles.cardElevated]}>
+            <Text style={styles.subTitle}>Result: </Text>
+            <Text style={styles.description}>long press to copy </Text>
+            <Text selectable style={styles.generatedPassword}>{password}</Text>
+          </View>
+        ) : null}
       </SafeAreaView>
     </ScrollView>
   )
