@@ -6,7 +6,6 @@ import BouncyCheckbox from 'react-native-bouncy-checkbox';
 export default function ProjectThreeApp() {
   const [password,setPassword] = useState('');
   const [isPassGenerated,setIspassGenerated] = useState(false);
-
   const [lowerCase,setLowerCase] = useState(true);
   const [upperCase,setUpperCase] = useState(false);
   const [numbers,setNumbers] = useState(false);
