@@ -4,13 +4,15 @@ import React, { useState } from 'react'
 export default function ProjectFourSelfApp() {
     const [currentColor,setCurrentColor] = useState('yellow')
 
-    const colors = ['green','blue','purple','black','white','salmon','gray','orange','red']
     const handleClick = ()=>{
-        const randomColorIndex = Math.round(Math.random() * colors.length);
-        // console.log(randomColorIndex);
-        setCurrentColor(colors[randomColorIndex])
+        const hexColor = '0123456789ABCDF';
+        let color = '#'
+        for(let i=0; i<6; i++){
+            color += hexColor[Math.floor(Math.random() * 16)]
+        }
+        setCurrentColor(color)
     }
-    
+
   return (
     <View style={[styles.container,{backgroundColor:currentColor}]}>
         <SafeAreaView>
