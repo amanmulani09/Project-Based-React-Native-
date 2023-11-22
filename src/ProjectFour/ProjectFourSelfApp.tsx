@@ -15,11 +15,17 @@ export default function ProjectFourSelfApp() {
 
   return (
     <View style={[styles.container,{backgroundColor:currentColor}]}>
+        <View style={styles.shapesContainer}>
+            <View style={styles.shapeFirst}></View>
+        </View>
         <SafeAreaView>
             <TouchableOpacity style={styles.btnPrimary} onPress={handleClick}>
                 <Text style={styles.textPrimary}>Press Me</Text>
             </TouchableOpacity>
         </SafeAreaView>
+        <View style={styles.shapesContainer}>
+
+        </View>
     </View>
   )
 }
@@ -38,5 +44,18 @@ const styles = StyleSheet.create({
     textPrimary:{
         color:'white',
         fontSize:22
+    },
+    shapesContainer:{
+        backgroundColor:'white',
+        marginVertical:10,
+        flex:1,
+        height:200,
+        width:350,
+    },
+    shapeFirst:{
+            width:100,
+            height:100,
+            borderColor:'black',
+            borderWidth:1
     }
 })
