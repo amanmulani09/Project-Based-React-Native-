@@ -9,7 +9,8 @@ import {AppRegistry} from 'react-native';
 // import ProjectTwoApp from './src/ProjectTwo/ProjectTwoApp';
 // import ProjectThreeApp from './src/ProjectThree/ProjectThreeApp';
 // import ProjectFourApp from './src/ProjectFour/ProjectFourApp';
-import ProjectFourSelfApp from './src/ProjectFour/ProjectFourSelfApp';
+// import ProjectFourSelfApp from './src/ProjectFour/ProjectFourSelfApp';
+import ProjectFiveApp from './src/ProjectFive/ProjectFiveApp';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => ProjectFourSelfApp);
+AppRegistry.registerComponent(appName, () => ProjectFiveApp);
