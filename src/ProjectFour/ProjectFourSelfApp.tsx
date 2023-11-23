@@ -2,21 +2,47 @@ import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity
 import React, { useState } from 'react'
 
 export default function ProjectFourSelfApp() {
-    const [currentColor,setCurrentColor] = useState('yellow')
+    const [currentColor,setCurrentColor] = useState('whites')
+
+    const [shapeColor,setShapeColors] = useState({
+        first:'blue',
+        second:'green',
+        third:'pink',
+        fourth:'gray',
+        fifth:'red'
+    })
 
     const handleClick = ()=>{
         const hexColor = '0123456789ABCDF';
-        let color = '#'
+        let colorFirst = '#'
+        let colorSecond = '#'
+        let colorThird = '#'
+        let colorFourth = '#'
+        let colorFifth = '#'
         for(let i=0; i<6; i++){
-            color += hexColor[Math.floor(Math.random() * 16)]
+            colorFirst += hexColor[Math.floor(Math.random() * 16)]
+            colorSecond += hexColor[Math.floor(Math.random() * 16)+2];
+            colorThird += hexColor[Math.floor(Math.random() * 16)-2];
+            colorFourth += hexColor[Math.floor(Math.random() * 16)+1];
+            colorFifth += hexColor[Math.floor(Math.random() * 16)-1];
         }
-        setCurrentColor(color)
+        setShapeColors({
+                first:colorFirst,
+                second:colorSecond,
+                third:colorThird,
+                fourth:colorFourth,
+                fifth:colorFifth
+        });
     }
 
   return (
     <View style={[styles.container,{backgroundColor:currentColor}]}>
         <View style={styles.shapesContainer}>
-            <View style={styles.shapeFirst}></View>
+            <View style={[styles.shapeFirst,styles.shape,{backgroundColor:shapeColor.first}]}></View>
+            <View style={[styles.shapeSecond,styles.shape,{backgroundColor:shapeColor.second}]}></View>
+            <View style={[styles.shapeThird,styles.shape,{backgroundColor:shapeColor.third}]}></View>
+            <View style={[styles.shapeFourth,styles.shape,{backgroundColor:shapeColor.fourth}]}></View>
+            <View style={[styles.shapeFifth,styles.shape,{backgroundColor:shapeColor.fifth}]}></View>
         </View>
         <SafeAreaView>
             <TouchableOpacity style={styles.btnPrimary} onPress={handleClick}>
@@ -24,7 +50,11 @@ export default function ProjectFourSelfApp() {
             </TouchableOpacity>
         </SafeAreaView>
         <View style={styles.shapesContainer}>
-
+            <View style={[styles.shapeFourth,styles.shape,{backgroundColor:shapeColor.fourth}]}></View>
+            <View style={[styles.shapeSecond,styles.shape,{backgroundColor:shapeColor.second}]}></View>
+            <View style={[styles.shapeFifth,styles.shape,{backgroundColor:shapeColor.fifth}]}></View>
+            <View style={[styles.shapeThird,styles.shape,{backgroundColor:shapeColor.third}]}></View>
+            <View style={[styles.shapeFirst,styles.shape,{backgroundColor:shapeColor.first}]}></View>
         </View>
     </View>
   )
@@ -51,11 +81,38 @@ const styles = StyleSheet.create({
         flex:1,
         height:200,
         width:350,
+        justifyContent:'space-evenly',
+        alignItems:'flex-end',
+        flexWrap:'wrap',
+        paddingHorizontal:10
+    },
+    shape:{
+        marginHorizontal:20,
+        marginVertical:10
     },
     shapeFirst:{
             width:100,
             height:100,
-            borderColor:'black',
-            borderWidth:1
+            alignSelf:'center'
+    },
+    shapeSecond:{
+        width:70,
+        height:70,
+        borderRadius:70/2,
+    },
+    shapeThird:{
+        width:120,
+        height:120,
+        borderRadius:8,
+    },
+    shapeFourth:{
+        width:100,
+        height:100,
+        borderRadius:16,
+    },
+    shapeFifth:{
+        width:120,
+        height:120,
+        borderRadius:120/2,
     }
 })
