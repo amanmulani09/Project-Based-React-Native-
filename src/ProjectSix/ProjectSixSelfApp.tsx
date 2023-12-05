@@ -1,4 +1,4 @@
-import { SafeAreaView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
+import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 
 import Snackbar from 'react-native-snackbar';
@@ -42,17 +42,56 @@ const buttonPressed = (targetValue:Currency)=>{
   }
 }
   return (
-      <SafeAreaView>
-        <View style={styles.container}>
-        <Text>Hello</Text>
+    <SafeAreaView style={styles.container}>
+        <View style={styles.inputContainer}>
+          <View>
+        <Text style={styles.inputCurrency}>₹</Text>
+          </View>
+          <View>
+        <TextInput
+        value={inputValue}
+        onChangeText={value => setInputValue(value)}
+        placeholder='please enter value to convert'
+        style={styles.input}
+        />
         </View>
-      </SafeAreaView>
+        </View>
+        <View style={styles.resultContainer}>
+          <Text>{resultValue && resultValue}</Text>
+        </View>
+
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
 container:{
   flex:1,
-  backgroundColor:'red'
-}
+  // backgroundColor:'gray',
+  justifyContent:'center',
+  alignItems:'center'
+},
+inputContainer:{
+  flex:1,
+  flexDirection:'row',
+  justifyContent:'center',
+  backgroundColor:'white',
+  width:350,
+  marginTop:20,
+  paddingVertical:20,
+  paddingHorizontal:20
+},
+inputCurrency:{
+  fontSize:22,
+  marginRight:5
+},
+input:{
+padding:5,
+borderWidth:1,
+borderColor:'lightgray',
+borderRadius:7,
+width:200
+},
+resultContainer:{},
+
 });
