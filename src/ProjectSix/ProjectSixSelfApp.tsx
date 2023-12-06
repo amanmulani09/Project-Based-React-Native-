@@ -59,7 +59,6 @@ const buttonPressed = (targetValue:Currency)=>{
         <View style={styles.resultContainer}>
           <Text>{resultValue && resultValue}</Text>
         </View>
-
     </SafeAreaView>
   )
 }
