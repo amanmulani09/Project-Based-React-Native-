@@ -5,3 +5,8 @@ interface Currency {
     flag:string,
     symbol:string
 }
+
+interface PlayerData {
+    id:number,
+    markAs:string
+}

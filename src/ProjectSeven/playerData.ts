@@ -1,0 +1,39 @@
+
+export const playerData:PlayerData[] = [
+    {
+        id:1,
+        markAs:'default'
+    },
+    {
+        id:2,
+        markAs:'default'
+    }, 
+    {
+        id:3,
+        markAs:'default'
+    },
+     {
+        id:4,
+        markAs:'default'
+    },
+     {
+        id:5,
+        markAs:'default'
+    }, 
+    {
+        id:6,
+        markAs:'default'
+    },
+     {
+        id:7,
+        markAs:'default'
+    }, 
+    {
+        id:8,
+        markAs:'default'
+    }, 
+    {
+        id:9,
+        markAs:'default'
+    },
+];
