@@ -1,4 +1,4 @@
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { FlatList, Pressable, SafeAreaView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 
 import Snackbar from 'react-native-snackbar';
@@ -43,19 +43,53 @@ const buttonPressed = (targetValue:Currency)=>{
 }
 
   return (
-   <SafeAreaView>
+   <>
     <StatusBar />
-    <View>
-      <Text>1</Text>
+    <View style={styles.container}>
+      <View style={styles.topContainer}>
+          <View style={styles.rupeesContainer}>
+            <Text style={styles.rupee}>₹</Text>
+            <TextInput 
+            maxLength={14}
+            value={inputValue}
+            clearButtonMode='always'
+            onChangeText={value => setInputValue(value)}
+            keyboardType='number-pad'
+            placeholder='enter amount in rupees'
+            style={styles.inputAmountField}
+            />
+          </View>
+          {resultValue && (
+            <Text style={styles.resultTxt}>{resultValue} </Text>
+          )}
+      </View>
+
+      <View style={styles.bottomContainer}>
+          <FlatList
+            numColumns={3}
+            data={currencyByRupee}
+            keyExtractor={item => item.name}
+            renderItem={({item})=>(
+              <Pressable style={[styles.button,
+              targetCurrency === item.name && styles.selected
+              ]}
+              onPress={()=> buttonPressed(item)}
+              >
+              <CurrencyBtn {...item}/>
+              </Pressable>
+            )}
+          />
+      </View>
     </View>
-   </SafeAreaView>
+   </>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#515151',
+    backgroundColor: '#f2f7fc',
+    marginTop:50
   },
   topContainer: {
     flex: 1,
