@@ -14,9 +14,22 @@ const Square = (playerData:PlayerData):JSX.Element=>{
 export default function ProjectSevenAppSelf() {
     const [currentPlayer,setCurrentPlayer] = useState('X');
     const [boardState,setBoardState] = useState(playerData);
+
+    const getWinner = ()=>{
+        if(boardState[0].markAs === "X" && boardState[1].markAs ===" X" && boardState[2].markAs === "X" ){
+           return "X"
+        }
+    }
+
     const handleActionPress = (player:PlayerData)=>{
         let updatedPlayerBoard = [...boardState].map(board => board.id === player.id ? {...board,markAs:currentPlayer}:board);
         setBoardState(updatedPlayerBoard);
+
+        const winner = getWinner();
+
+        if(winner === "X"){
+            console.log('X is winner')
+        }
         console.log(updatedPlayerBoard)
         // console.log(updatedPlayerBoard)
      

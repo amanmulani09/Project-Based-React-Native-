@@ -13,7 +13,10 @@ import {AppRegistry} from 'react-native';
 // import ProjectFiveApp from './src/ProjectFive/ProjectFiveApp';
 // import ProjectSixApp from './src/ProjectSix/ProjectSixSelfApp';
 // import ProjectSixApp from './src/ProjectSix/ProjectSixApp';
-import ProjectSevenAppSelf from './src/ProjectSeven/ProjectSevenAppSelf';
+// import ProjectSevenAppSelf from './src/ProjectSeven/ProjectSevenAppSelf';
+import ProjectSevenApp from './src/ProjectSeven/ProjectSevenApp';
+
+// import App from './src/core components/App'
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => ProjectSevenAppSelf);
+AppRegistry.registerComponent(appName, () => ProjectSevenApp);
