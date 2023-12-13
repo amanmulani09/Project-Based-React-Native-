@@ -4,7 +4,7 @@ import React from 'react'
 export default function ProjectEightApp() {
   return (
     <View>
-      <Text>ProjectEightApp</Text>
+      <Text>Spotify</Text>
     </View>
   )
 }
