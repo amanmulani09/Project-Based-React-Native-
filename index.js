@@ -3,6 +3,9 @@
  */
 <script src="http://192.168.0.101:8097"></script>
 import {AppRegistry} from 'react-native';
+import TrackPlayer from 'react-native-track-player';
+import { playbackService } from './musicPlayerService';
+
 // import App from './App';
 // import AppPro from './AppPro';
 // import FlexBoxPrac from './src/components/flexbox/FlexBoxPrac';
@@ -21,3 +24,6 @@ import ProjectEightApp from './src/ProjectEight/ProjectEightApp';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => ProjectEightApp);
+
+// AppRegistry.registerComponent(...);
+TrackPlayer.registerPlaybackService(() => playbackService);
