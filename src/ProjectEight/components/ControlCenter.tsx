@@ -16,7 +16,7 @@ import  Icon  from 'react-native-vector-icons/MaterialIcons'
         await TrackPlayer.skipToNext();
     }
 
-    const togglePlayBack = async (playback:State|any)=>{
+    const togglePlayBack = async (playback:State | any)=>{
         const currentTrack = TrackPlayer.getCurrentTrack();
 
         if(currentTrack !== null){
@@ -30,21 +30,10 @@ import  Icon  from 'react-native-vector-icons/MaterialIcons'
     }
     
   return (
-    <SafeAreaView style={styles.container}>
-    <View >
-      <Pressable onPress={skipToPrevious}>
-        <Icon name="skip-previous" size={40} style={styles.icon}/>
-      </Pressable>
+    <View style={styles.container}>
 
-      <Pressable onPress={()=> togglePlayBack(playerState)}>
-        <Icon name={playerState.state === State.Playing ? "pause" : "play-arrow"} size={75} style={styles.icon}/>
-      </Pressable>
-
-      <Pressable onPress={skipToNext}>
-        <Icon name="skip-next" size={40} style={styles.icon}/>
-      </Pressable>
     </View>
-    </SafeAreaView>
+
   )
 }
 export default ControlCenter;
