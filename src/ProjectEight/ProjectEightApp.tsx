@@ -2,6 +2,7 @@ import { ActivityIndicator, SafeAreaView, StatusBar, StyleSheet, Text, View } fr
 import React,{useEffect,useState} from 'react'
 
 import { setupPlayer,addTrack } from '../../musicPlayerService'
+import ControlCenter from './components/ControlCenter';
 export default function ProjectEightApp() {
   const [isPlayerReady,setIsPlayerReady] = useState(false);
 
@@ -11,6 +12,7 @@ export default function ProjectEightApp() {
     if(isSetup){
       await addTrack();
     };
+    console.log(isSetup);
     setIsPlayerReady(isSetup)
   }
 
@@ -19,6 +21,7 @@ export default function ProjectEightApp() {
   },[]);
 
   if(!isPlayerReady){
+    console.log('player not ready')
     return(
       <SafeAreaView>
         <ActivityIndicator 
@@ -31,7 +34,7 @@ export default function ProjectEightApp() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Text>Spotify</Text>
+   <ControlCenter />
     </SafeAreaView>
   )
 }
