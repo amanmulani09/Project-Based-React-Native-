@@ -114,7 +114,7 @@ export default function ProjectSevenApp() {
         style={styles.card}
         onPress={()=> onChangeItem(index)}
         >
-            <NormalIcon name={item} />
+            <Icons name={item} />
         </Pressable>
       )}
       />
