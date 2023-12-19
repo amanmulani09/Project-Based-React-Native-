@@ -12,7 +12,7 @@ export default function ProjectEightApp() {
     if(isSetup){
       await addTrack();
     };
-    console.log(isSetup);
+    console.log(isSetup)
     setIsPlayerReady(isSetup)
   }
 
@@ -32,9 +32,8 @@ export default function ProjectEightApp() {
   }
 
   return (
-    <SafeAreaView>
-      <StatusBar />
-   <ControlCenter />
+    <SafeAreaView style={styles.container}>
+      <ControlCenter />
     </SafeAreaView>
   )
 }
