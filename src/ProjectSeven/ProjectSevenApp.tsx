@@ -75,6 +75,7 @@ export default function ProjectSevenApp() {
         textColor:'#FFFFFF'
       })
     }
+    
     if(gameState[itemNumber] === "empty"){
       gameState[itemNumber] = isCross ? "cross" : "circle";
       setIsCross(!isCross);
@@ -187,7 +188,6 @@ const styles = StyleSheet.create({
   },
   gameBtn: {
     alignItems: 'center',
-
     padding: 10,
     borderRadius: 8,
     marginHorizontal: 36,

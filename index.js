@@ -18,12 +18,12 @@ import { playbackService } from './musicPlayerService';
 // import ProjectSixApp from './src/ProjectSix/ProjectSixApp';
 // import ProjectSevenAppSelf from './src/ProjectSeven/ProjectSevenAppSelf';
 // import ProjectSevenApp from './src/ProjectSeven/ProjectSevenApp';
-import ProjectEightApp from './src/ProjectEight/ProjectEightApp';
+// import ProjectEightApp from './src/ProjectEight/ProjectEightApp';
 
 // import App from './src/core components/App'
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => ProjectEightApp);
+AppRegistry.registerComponent(appName, () => ProjectSixApp);
 
 // AppRegistry.registerComponent(...);
 TrackPlayer.registerPlaybackService(() => playbackService);
