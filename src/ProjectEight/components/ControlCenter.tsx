@@ -51,7 +51,6 @@ const ControlCenter = () => {
 const styles = StyleSheet.create({
     container: {
       marginBottom: 56,
-      backgroundColor:'black',
       flex: 1,
       flexDirection: 'row',
       alignItems: 'center',

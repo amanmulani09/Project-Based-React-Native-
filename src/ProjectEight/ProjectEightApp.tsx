@@ -3,6 +3,7 @@ import React,{useEffect,useState} from 'react'
 
 import { setupPlayer,addTrack } from '../../musicPlayerService'
 import ControlCenter from './components/ControlCenter';
+import MusicPlayer from './screen/MusicPlayer';
 export default function ProjectEightApp() {
   const [isPlayerReady,setIsPlayerReady] = useState(false);
 
@@ -18,7 +19,7 @@ export default function ProjectEightApp() {
 
   useEffect(()=>{
     setup();
-  },[]);
+  },[isPlayerReady]);
 
   if(!isPlayerReady){
     console.log('player not ready')
@@ -32,9 +33,10 @@ export default function ProjectEightApp() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ControlCenter />
-    </SafeAreaView>
+    <View style={styles.container}>
+      <StatusBar barStyle={"light-content"}/>
+      <MusicPlayer />
+    </View>
   )
 }
 
