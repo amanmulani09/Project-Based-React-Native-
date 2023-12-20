@@ -12,7 +12,7 @@ const MusicPlayer = () => {
     useTrackPlayerEvents([Event.PlaybackTrackChanged],async(event)=>{
 
         switch(event.type){
-            case Event.PlaybackActiveTrackChanged:
+            case Event.PlaybackTrackChanged:
             const playingTrack = await TrackPlayer.getTrack(event.nextTrack);
             setTrack(playingTrack)
             break;
