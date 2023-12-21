@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screen/Home';
 import Details from './screen/Details';
 
+
 export type RootStackParamList = {
     Home: undefined;
     Details: { productId: string };
