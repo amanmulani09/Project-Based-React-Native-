@@ -7,6 +7,7 @@ type songInfoProps = PropsWithChildren<{
 }>
 
 const SongInfo = ({track}:songInfoProps) => {
+  // console.log('trackProp',track)
   return (
     <View style={styles.container}>
      <View>
@@ -25,10 +26,11 @@ const styles = StyleSheet.create({
     container: {
       width: '90%',
       marginTop: 18,
-  
-      flexDirection: 'row',
-      alignItems: 'baseline',
+      flex:1,
+      flexDirection: 'column',
+      alignItems: 'center',
       justifyContent: 'center',
+    
     },
     name: {
       marginBottom: 8,

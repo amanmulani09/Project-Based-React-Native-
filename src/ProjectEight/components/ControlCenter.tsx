@@ -18,17 +18,20 @@ const ControlCenter = () => {
         await TrackPlayer.skipToPrevious()
     }
 
-    const togglePlayback = async (playback: State) => {
-        const  currentTrack = await TrackPlayer.getCurrentTrack()
-
+    const togglePlayback = async (playback: State | any) => {
+        const  currentTrack = await TrackPlayer.getActiveTrackIndex()
+        // console.log(currentTrack,'currentTrack')
         if (currentTrack !== null) {
-            if (playback === State.Paused || playback === State.Ready) {
+          // console.log(playback)
+            if (playback.state === State.Paused || playback.state === State.Ready) {
+              console.log(playback,'playback 26')
                 await TrackPlayer.play()
             } else {
                 await TrackPlayer.pause()
             }
         }
     }
+    console.log('32',playBackState)
 
   return (
     <View style={styles.container}>

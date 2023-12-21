@@ -9,16 +9,18 @@ const {width} = Dimensions.get('window');
 
 const MusicPlayer = () => {
     const [track,setTrack] = useState<Track | null>();
-    useTrackPlayerEvents([Event.PlaybackTrackChanged],async(event)=>{
-
+    useTrackPlayerEvents([Event.PlaybackActiveTrackChanged],async(event)=>{
+      console.log('inside event 13')
         switch(event.type){
-            case Event.PlaybackTrackChanged:
-            const playingTrack = await TrackPlayer.getTrack(event.nextTrack);
+            case Event.PlaybackActiveTrackChanged:
+            const playingTrack = await TrackPlayer.getTrack(event.index);
+            console.log(playingTrack,'playingTrack17')
             setTrack(playingTrack)
             break;
         }
     })
     const renderArtWork = ()=>{
+      console.log(track,'track')
         return(
             <View style={styles.listArtWrapper}>
                 <View style={styles.albumContainer}>
