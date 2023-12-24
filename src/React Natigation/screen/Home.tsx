@@ -1,7 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Home = () => {
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../App';
+
+type homeProps = NativeStackScreenProps<RootStackParamList,'Home'>;
+
+const Home = ({navigation}:homeProps) => {
   return (
     <View>
       <Text>Home</Text>
