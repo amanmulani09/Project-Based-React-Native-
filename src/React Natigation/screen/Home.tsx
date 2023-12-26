@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -8,9 +8,17 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 type homeProps = NativeStackScreenProps<RootStackParamList,'Home'>;
 
 const Home = ({navigation}:homeProps) => {
+
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={styles.container}>
+      <Text style={styles.smallText}>Home</Text>
+
+      <Button
+      title='go to details'
+      onPress={()=> navigation.push("Details",{
+        productId:'86'
+      })}
+      />
     </View>
   )
 }
