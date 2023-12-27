@@ -9,7 +9,6 @@ import Home from './screen/Home';
 import Details from './screen/Details';
 
 //type for passing the type of data to the params and the screens;
-
 export type RootStackParamList = {
     Home:undefined;
     Details:{product:Product};
