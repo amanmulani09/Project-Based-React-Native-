@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,SafeAreaView, Pressable } from 'react-native'
 import React from 'react'
 import { FlatList } from 'react-native-gesture-handler'
-import { PRODUCTS_LIST } from '../data/constant'
+import { PRODUCTS_LIST } from '../../ProjectTen/data/constant'
 
 import Seperator from '../components/Seperator'
 import ProductItem from '../components/ProductItem'

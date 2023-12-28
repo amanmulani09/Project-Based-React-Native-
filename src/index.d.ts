@@ -10,7 +10,7 @@ interface PlayerData {
     id:number,
     markAs:string
 }
-
+//project ten TS configuration
 interface Product {
     id: string;
     name: string;
