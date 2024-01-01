@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
   },
   name: {
     marginBottom: 4,
-
     fontSize: 20,
     fontWeight: '500',
   },
@@ -72,15 +71,12 @@ const styles = StyleSheet.create({
   priceContainer: {
     paddingVertical: 12,
     paddingHorizontal: 12,
-
     marginBottom: 12,
-
     borderRadius: 6,
     backgroundColor: '#deffeb',
   },
   rating: {
     marginRight: 4,
-
     borderRadius: 4,
     paddingHorizontal: 8,
     justifyContent: 'center',
@@ -99,7 +95,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     marginRight: 8,
-
     color: 'rgba(0, 0, 0, 0.5)',
     textDecorationLine: 'line-through',
   },
@@ -112,7 +107,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '600',
     color: '#4bb550',
-
     marginRight: 8,
   },
   badge: {
@@ -123,11 +117,9 @@ const styles = StyleSheet.create({
   tagBadge: {
     paddingVertical: 2,
     paddingHorizontal: 4,
-
     borderWidth: 1,
     borderRadius: 4,
     borderColor: 'rgba(0, 0, 0, 0.5)',
-
     color: 'rgba(0, 0, 0, 0.8)',
   },
 });

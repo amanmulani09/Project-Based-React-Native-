@@ -4,7 +4,6 @@ import React from 'react'
 const Seperator = () => {
   return (
     <View style={styles.seperator}> 
-   
     </View>
   )
 }
