@@ -1,7 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React, { PropsWithChildren } from 'react'
 
-
 type ProductProps = PropsWithChildren<{
     product: Product
 }>
@@ -38,11 +37,9 @@ const ProductItem = ({product}: ProductProps) => {
                 </Text>
         </View>
       </View>
-
     </View>
   )
 }
-
 
 const styles = StyleSheet.create({
     container: {
@@ -56,12 +53,10 @@ const styles = StyleSheet.create({
       width: 90,
       height: 150,
       resizeMode: 'contain',
-  
       marginRight: 12,
     },
     name: {
       marginBottom: 4,
-  
       fontSize: 15,
       fontWeight: '500',
     },
@@ -76,7 +71,6 @@ const styles = StyleSheet.create({
       paddingHorizontal: 8,
       justifyContent: 'center',
       backgroundColor: '#008c00',
-  
       marginRight: 4,
     },
     ratingText: {
@@ -91,7 +85,6 @@ const styles = StyleSheet.create({
       fontSize: 18,
       marginRight: 4,
       fontWeight: '600',
-  
       color: 'rgba(0, 0, 0, 0.5)',
       textDecorationLine: 'line-through',
     },
@@ -99,7 +92,6 @@ const styles = StyleSheet.create({
       fontSize: 18,
       marginRight: 4,
       fontWeight: '600',
-  
       color: '#000000',
     },
     offerPercentage: {
