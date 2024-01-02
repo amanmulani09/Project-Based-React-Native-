@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View,FlatList } from 'react-native'
 import React from 'react'
 
 //react navigation
@@ -8,7 +8,6 @@ import {RootStackParamList} from '../App';
 import ProductItem from '../components/ProductItem';
 import Seperator from '../components/Seperator';
 import { PRODUCTS_LIST } from '../data/constant';
-import { FlatList } from 'react-native-gesture-handler';
 
 type HomeProps = NativeStackScreenProps<RootStackParamList,"Home">
 const Home = ({navigation}:HomeProps) => {

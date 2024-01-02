@@ -15,7 +15,6 @@ const ProductItem = ({product}: ProductProps) => {
 
       <View>
         <Text style={styles.name}>{product.name}</Text>
-
         <View style={[styles.rowContainer, styles.ratingContainer]}>
             <View style={styles.rating}>
                 <Text style={styles.ratingText}>{product.rating} ★</Text>

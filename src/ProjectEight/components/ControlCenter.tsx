@@ -31,7 +31,7 @@ const ControlCenter = () => {
             }
         }
     }
-    console.log('32',playBackState)
+    console.log('32')
 
   return (
     <View style={styles.container}>
