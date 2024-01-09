@@ -23,14 +23,15 @@ import { playbackService } from './musicPlayerService';
 // import App from './src/core components/App'
 // import App from './src/ProjectTen/App';
 
-import App from './src/PracticleRoadmap/App';
+// import App from './src/PracticleRoadmap/App';
 //Self Practice projects
 
 // import App from './src/NavigationPractice01/App';
+import AppNavigation from './src/LoginAndSignup/AppNavigation';
 
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => AppNavigation);
 
 // AppRegistry.registerComponent(...);
 TrackPlayer.registerPlaybackService(() => playbackService);
