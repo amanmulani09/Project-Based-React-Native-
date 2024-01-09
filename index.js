@@ -21,7 +21,9 @@ import { playbackService } from './musicPlayerService';
 // import ProjectEightApp from './src/ProjectEight/ProjectEightApp';
 // import App from './src/React Natigation/App';
 // import App from './src/core components/App'
-import App from './src/ProjectTen/App';
+// import App from './src/ProjectTen/App';
+
+import App from './src/PracticleRoadmap/App';
 //Self Practice projects
 
 // import App from './src/NavigationPractice01/App';
