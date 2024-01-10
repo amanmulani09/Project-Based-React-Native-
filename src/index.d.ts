@@ -1,4 +1,5 @@
 declare module '*.png'
+declare module '*.svg'
 interface Currency {
     name:string,
     value:number,
