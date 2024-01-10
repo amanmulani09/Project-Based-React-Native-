@@ -1,7 +1,7 @@
 import { SafeAreaView, StyleSheet, Text, View,Image } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/AntDesign'
-import firstVector from '../assets/images/undraw_1.svg'
+const imgSrc = require('../assets/images/login_1.png')
 const Login = () => {
   const userName = "amanmulani09"
   return (
@@ -12,18 +12,17 @@ const Login = () => {
         <Icon name='user' style={styles.headerIcon}/>
       </View>
       <View style={styles.headingUserDetails}>
-      <Text style={styles.headingUserDetailsText}>Welcome Back {userName}</Text>
+      <Text style={styles.headingUserDetailsText}>Welcome back, {userName}</Text>
       </View>
       </View>
       <View style={styles.mainImgContainer}>
         <Image
         style={styles.mainImg}
-        source={
-          {
-            uri:'./assets/login_1.png'
-          }
-        }
+        source={imgSrc}
         />
+      </View>
+      <View style={styles.inputContainer}>
+        <Text style={styles.mobileNumberHeading}>Enter Your Mobile Number</Text>
       </View>
     </SafeAreaView>
   )
@@ -33,16 +32,17 @@ export default Login
 
 const styles = StyleSheet.create({
   container:{
-    flex:1
+    flex:1,
+    backgroundColor:'white'
   },
   headerContainer:{
-  flex:1
+  flex:0,
+  height:'10%'
   },
   header:{
     flex:0,
     flexDirection:'row',
-    height:'3%',
-    // backgroundColor:'green'
+    height:'30%'
 
   },
   headingText:{
@@ -65,10 +65,21 @@ const styles = StyleSheet.create({
     marginLeft:10
   },
   mainImgContainer:{
-    backgroundColor:'green'
+    flex:1
   },
   mainImg:{
-width:200,
-height:400
+  width:'95%',
+  height:400,
+  marginLeft:'2.5%'
+  },
+  inputContainer:{
+flex:1,
+marginTop:100,
+marginLeft:'18%'
+  },
+  mobileNumberHeading:{
+    fontSize:20,
+    fontWeight:'bold',
+    color:'#6A0DAD'
   }
 })
