@@ -31,7 +31,8 @@ import { playbackService } from './musicPlayerService';
 
 //practicle roadmap Apps
 
-import App from './PracticleRoadmap/progressbar/App'
+// import App from './PracticleRoadmap/progressbar/App'
+import App from './PracticleRoadmap/TopTabNavigator/App';
 
 import {name as appName} from './app.json';
 
